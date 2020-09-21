@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Harvard Art</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Favicon.png" type="image/x-icon" />
+    <!-- <script defer src="app.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Search the Harvard Art Collection</h1>
+      <form id="search-form">
+        <fieldset>
+          <label for="keywords">Query</label>
+          <input id="keywords" type="text" placeholder="enter keywords..." />
+        </fieldset>
+        <fieldset>
+          <label for="classification-select"
+            >Classification <span class="classification-count"></span
+          ></label>
+          <select name="classification" id="classification-select">
+            <option value="any">Any</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <label for="century-select"
+            >Century <span class="century-count"></span
+          ></label>
+          <select name="century" id="century-select">
+            <option value="any">Any</option>
+          </select>
+        </fieldset>
+        <button type="submit">Search</button>
+      </form>
+      <aside id="pagination">
+        <div class="controls">
+          <button class="prev">Previous</button>
+          <button class="next">Next</button>
+        </div>
+        <section class="data"></section>
+      </aside>
+      <main id="search-results"></main>
+    </div>
+    <div id="loading" class="fixed-window">
+      <h2 class="message">Searching...</h2>
+    </div>
+    <div id="gallery" class="fixed-window">
+      <button class="close">close</button>
+      <div class="controls">
+        <button class="prev">prev</button>
+        <button class="next">next</button>
+      </div>
+      <div class="wrapper"></div>
+    </div>
+    <!-- turn on import/export syntax ... each module has it's own scope, one thing per module -->
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
+
+<!-- OLD CODE -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Harvard Art</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <form id="search">
+        <h1>Search the Harvard Art Collection</h1>
+        <fieldset>
+          <label for="keywords">Query</label>
+          <input id="keywords" type="text" placeholder="enter keywords..." />
+        </fieldset>
+        <fieldset>
+          <label for="select-classification"
+            >Classification <span class="classification-count"></span
+          ></label>
+          <select name="classification" id="select-classification">
+            <option value="any">Any</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <label for="select-century"
+            >Century <span class="century-count"></span
+          ></label>
+          <select name="century" id="select-century">
+            <option value="any">Any</option>
+          </select>
+        </fieldset>
+        <button>SEARCH</button>
+      </form>
+      <aside id="preview">
+        <header class="pagination">
+          <button disabled class="previous">Previous</button>
+          <button disabled class="next">Next</button>
+        </header>
+        <section class="results"></section>
+      </aside>
+      <main id="feature"></main>
+    </div>
+    <button id="get-records">Get Records</button>
+    <div id="records"></div>
+    <div id="loading">
+      <h2 class="message">Searching...</h2>
+    </div>
+  </body>
+</html> -->
